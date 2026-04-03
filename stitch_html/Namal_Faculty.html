@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#5cc070",
+              "on-secondary-container": "#6c4700",
+              "surface-container": "#efeded",
+              "on-tertiary-fixed": "#002109",
+              "surface-dim": "#dbdad9",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#aef2bb",
+              "on-secondary": "#ffffff",
+              "tertiary": "#003211",
+              "secondary-fixed-dim": "#ffba48",
+              "secondary": "#815600",
+              "tertiary-fixed-dim": "#77dc88",
+              "background": "#fbf9f9",
+              "primary-fixed-dim": "#93d6a0",
+              "surface-container-high": "#e9e8e7",
+              "surface-bright": "#fbf9f9",
+              "on-primary-fixed": "#00210c",
+              "surface-tint": "#2a6a3f",
+              "secondary-container": "#feb22b",
+              "inverse-on-surface": "#f2f0f0",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#93f9a2",
+              "outline": "#707970",
+              "on-surface-variant": "#404941",
+              "on-surface": "#1b1c1c",
+              "on-primary-container": "#79bb87",
+              "on-background": "#1b1c1c",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#005320",
+              "surface-container-highest": "#e4e2e2",
+              "surface-variant": "#e4e2e2",
+              "primary": "#003215",
+              "secondary-fixed": "#ffddb1",
+              "inverse-surface": "#303031",
+              "on-tertiary": "#ffffff",
+              "surface": "#fbf9f9",
+              "outline-variant": "#c0c9be",
+              "on-secondary-fixed-variant": "#614000",
+              "primary-container": "#004b23",
+              "on-secondary-fixed": "#291800",
+              "on-primary-fixed-variant": "#0b5229",
+              "tertiary-container": "#004b1c",
+              "surface-container-low": "#f5f3f3",
+              "inverse-primary": "#93d6a0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-12 py-4 max-w-[1920px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#003215]">
+                Namal University
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Academics</a>
+<a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Admissions</a>
+<a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Student Life</a>
+<a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#003215] hover:text-[#815600] transition-colors duration-300" href="#">Research</a>
+<a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#815600] border-b-2 border-[#815600]" href="#">Faculty</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[#003215]">search</span>
+</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-manrope font-bold uppercase text-xs tracking-widest transition-all hover:shadow-lg active:scale-95">
+                    Apply Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-12 max-w-[1920px] mx-auto">
+<!-- Hero Section: Editorial Header -->
+<header class="editorial-grid mb-24">
+<div class="col-span-8 lg:col-span-7">
+<span class="text-secondary font-headline font-extrabold uppercase tracking-[0.2em] text-xs mb-4 block">Distinguished Minds</span>
+<h1 class="text-primary font-headline text-7xl font-extrabold tracking-tighter leading-none mb-8">
+                    Our <span class="italic font-light">Faculty</span> &amp; Mentors.
+                </h1>
+<p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">
+                    A community of scholars, researchers, and practitioners dedicated to shaping the next generation of leaders through intellectual rigor and ethical grounding.
+                </p>
+</div>
+<div class="col-span-4 lg:col-span-5 relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="relative bg-surface-container-low p-8 rounded-xl aspect-[4/3] flex items-end">
+<div class="absolute inset-0 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-40" data-alt="Modern university campus library interior with floor to ceiling windows and students studying in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSA1koi6VmJX593BqaCWw_AHrQLFSTXSzWPSIn5NGwvAuQidpi5T0twX6TbpovlgqfP1cRnkTCH7ZeY1a-QGNRgDPxtTN3NLOST8RhsYkBv66mABhtwqHQJyhZEisvyEvnNrtdlu2yfh735rGPQn8brM-vg8VO_CMWAt0LrgYzOspDU6Q299pB9vCkB2jOw9nHeixjxdE1kZED6NJ3kv5Xb4GhglnGjWdPhtl2oYC7lCOhCj16_a8vlqGtaqN0xilD9dT6fg7e"/>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline font-bold text-primary text-3xl">400+</h3>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Global Researchers</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Search & Filter Bar -->
+<section class="mb-16 bg-surface-container-low rounded-xl p-4 flex flex-wrap items-center justify-between gap-6">
+<div class="flex-1 min-w-[300px] relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-secondary-container transition-all placeholder:text-outline-variant font-label text-sm" placeholder="Search by name, research interest, or department..." type="text"/>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-full text-xs font-bold font-label uppercase tracking-wider" data-filter="all">All</button>
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-bold font-label uppercase tracking-wider hover:bg-surface-dim transition-colors" data-filter="engineering">Engineering</button>
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-bold font-label uppercase tracking-wider hover:bg-surface-dim transition-colors" data-filter="computer-science">Computer Science</button>
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-bold font-label uppercase tracking-wider hover:bg-surface-dim transition-colors" data-filter="business">Business</button>
+<button class="px-6 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-bold font-label uppercase tracking-wider hover:bg-surface-dim transition-colors" data-filter="social-sciences">Social Sciences</button>
+</div>
+</section>
+<!-- Faculty Directory Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Faculty Member Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col" data-department="engineering">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Professional portrait of a male professor in a dark suit standing in a modern academic office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjDc-R5O35XblJmkWFUJieMgMSTAzEoK6AnTafYW9vn9cCrm50CgvH8Aq8TYmAeb4Fa03zyyxyafYNyPivEz5MKuVool_FOMdhEC04EisbDNowVKIwMph0bzV6M2_AOlvhKBjJWX6KLmDgP8Clp5BtHYAofSQE0IJxtx2eg3XeXkpODYEH2tbywUykvo717In6fCLpJ8cyjeXXDCevjfGg74k7Nm5EH_fzqI6m2p_42NoxTCopCH65cCj5niVQdjJARDEfQ3X8"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Engineering</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-secondary transition-colors">Dr. Ahmed Salman</h3>
+<p class="text-on-surface-variant font-label text-sm font-medium mb-4">Professor &amp; Dean of Engineering</p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Research Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Renewable Energy</span>
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Smart Grids</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty Member Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col" data-department="computer-science">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Professional portrait of a female academic with glasses, smiling warmly, studio lighting with a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWVxNotznZkdDXnNzr85MiWw8BOPPd7uwJWovRv46mVNH64ZaRfkon4UYgo0I82hMPXNQICypvoa74acALIabE3IsLx7YFvuB0RlMzdeGC2tA6HicY0cO-XxlGjYT9y2DZbgB8Ud3vVvGZp8tg5718siHIhr3m78tXO-_vY2FOl8jaLVMu1g5tOHXrgPVFrvtOYf-4QQJPEFpvCAGEC0HovhFqLQMQIFrMVKvs1UdKrZvV9chE7aG5Pph73Uqk4NzUY2OHXpR"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Computer Science</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-secondary transition-colors">Dr. Sarah Khalid</h3>
+<p class="text-on-surface-variant font-label text-sm font-medium mb-4">Associate Professor</p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Research Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Deep Learning</span>
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Bioinformatics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty Member Card 3 (Bento Variant - Double Height) -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col md:row-span-2" data-department="social-sciences">
+<div class="h-[60%] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Academic researcher working in a bright laboratory environment, adjusting a microscope with professional focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC84PSquQ5wIkoZ2Iumj4oRdLJjR7leBTuyDZqQqJhaQssbW4vIXaZJAff2IBLpQGl2Lf33M9Xd2ba04y5tJXj_vTIafMfgVrursmeAwOj4eCbVTcVPyiDfoAyRJLjAcjfZoGhR_P10IJh7sX963uNJzLZHoZVU3IBAxrl9XIsKRUxBMKCjO-u4x65eiYjRFylaohCSGhNcNZFesNQyAW2YPDQD_gI10nOYalA7R_QADKbAnrEP0fEyzRu3J9TiYR7ymUyTK_3S"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">Lead Researcher</span>
+<h3 class="font-headline text-3xl font-bold text-on-primary">Dr. Omar Farooq</h3>
+<p class="text-primary-fixed font-label text-sm">Head of Social Sciences</p>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 italic">
+                        "Empowering communities through data-driven policy making and sustainable socio-economic frameworks."
+                    </p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-3">Core Research</p>
+<ul class="space-y-3">
+<li class="flex items-center text-xs text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-3"></span>
+                                Rural Economic Development
+                            </li>
+<li class="flex items-center text-xs text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-3"></span>
+                                Behavioral Economics
+                            </li>
+<li class="flex items-center text-xs text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-3"></span>
+                                Policy Analysis
+                            </li>
+</ul>
+<button class="mt-8 text-primary font-bold text-xs uppercase tracking-widest flex items-center group/btn hover:text-secondary transition-colors">
+                            View Publications
+                            <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Faculty Member Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col" data-department="business">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Professional woman in a blazer in a modern corporate office, confident expression, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA33DqRs8OBlDM2_y5g4yoQ7hdn0m44YtNMeTy9LIG0_84IDtlfCRRwf_yA8LfGDQxe4vPOhOwJDEVfuX4zCQVM5TL6YZt8A4jOLSR-5AUEXPsR9Nz5LoBykvB-nXhtjVY16Xty_DYVVWG52qkWQPuKdmGNLS4f8bQ2sNdGe8xTRz8be0Hpdr2446vBcsl9vXbYP3dqYInBLbEn4aSE-8fU2KXlGV9ZoVmsGFaulp-9wu0tuJV_7eg9UUnlUKv4Wl-shL6hh8I"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Business</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-secondary transition-colors">Prof. Maria Butt</h3>
+<p class="text-on-surface-variant font-label text-sm font-medium mb-4">Director of Business School</p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Research Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Agile Management</span>
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Ethics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty Member Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col" data-department="engineering">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Middle-aged professor with salt and pepper hair in a library, intellectual atmosphere, professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF8IHMllwy4S4Q95aR48oQjc7vbhRzJpvNAMkXJ-GPB1-02HTwSFJDdVY3FjJUhCG0fwCKc1xnoUnVaknYwO6HdlZTFUlFwjJaT7GPOKY5O3e4p8enBj6EeiVQ0FhaKLFmSARwdRQWNfeCvLU0HHO_-zNhSjSgWGHltsYfxBlxn86z98osB-wsbBvXZXxlb2ATpmQ5HIw96eMDDRXDCIbgKB6zvneqVT1ne2dndT6ZeF09_uh8J0Reo1W2E4FADQPzX5hIAlvE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Engineering</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-secondary transition-colors">Dr. Zain Malik</h3>
+<p class="text-on-surface-variant font-label text-sm font-medium mb-4">Assistant Professor</p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Research Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Control Systems</span>
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Robotics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty Member Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col" data-department="computer-science">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Young professional academic in a bright modern workspace, daylight reflecting on desk, focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ID6fpnh1FlbsVpmO31OtgSVfwwf-HwO94_CJPx8FfLjtfzBYKXhGhZCR3vUdfFgQzMkTPNVr-Xsnp3eDbDfth6Qly5bNH7uLTx1KaZCAgsTuY5tHIl7178axAujoqSUz38n1b-Lny6hhuJ3sRhEna0CZVXG9EaTmUXPwrBt4A9wOwjsIqPBttU5xmX9icuc2rMTLNAREfg9gM3dfJaoP3e4eLtSQCCm9meBWHzA5wAO22tplXsK_-gQNUtUBNW33W8CpD02N"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Computer Science</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline text-2xl font-bold text-primary group-hover:text-secondary transition-colors">Dr. Amna Pervez</h3>
+<p class="text-on-surface-variant font-label text-sm font-medium mb-4">Assistant Professor</p>
+<div class="mt-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Research Interests</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Cybersecurity</span>
+<span class="text-xs px-2 py-1 bg-surface-container rounded-lg text-on-surface">Cloud Tech</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Join the Faculty CTA (Bento Bottom) -->
+<section class="mt-24 editorial-grid">
+<div class="col-span-12 lg:col-span-12 bg-primary py-20 px-12 rounded-xl relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] border-[40px] border-secondary-container rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</div>
+<div class="relative z-10 max-w-3xl">
+<h2 class="text-on-primary font-headline text-5xl font-extrabold tracking-tighter mb-6">Shape the Future of <br/>Knowledge with Us.</h2>
+<p class="text-primary-fixed-dim text-lg mb-10 leading-relaxed">
+                        We are always seeking visionary educators and researchers to join our world-class faculty. Explore open positions and research fellowships.
+                    </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:scale-105 transition-transform">
+                            View Open Roles
+                        </button>
+<button class="border border-outline-variant text-on-primary px-10 py-4 rounded-xl font-headline font-bold uppercase text-sm tracking-[0.1em] hover:bg-on-primary/10 transition-colors">
+                            Research Fellows
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f3f3] text-[#003215] border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 w-full max-w-[1920px] mx-auto">
+<div data-department="engineering">
+<div class="text-xl font-bold text-[#003215] mb-6">Namal University</div>
+<p class="font-manrope text-sm leading-relaxed opacity-70 max-w-xs">
+                    Inspiring the next generation of knowledge seekers and ethical leaders in the heart of Mianwali.
+                </p>
+</div>
+<div class="flex flex-col space-y-4" data-department="computer-science">
+<span class="font-manrope font-bold uppercase text-xs tracking-widest text-[#815600]">Quick Links</span>
+<a class="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Contact Us</a>
+<a class="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Privacy Policy</a>
+<a class="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Careers</a>
+<a class="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Alumni</a>
+<a class="font-manrope text-sm opacity-70 hover:opacity-100 hover:text-[#815600] transition-all" href="#">Give to Namal</a>
+</div>
+<div class="flex flex-col items-start md:items-end" data-department="social-sciences">
+<div class="flex space-x-4 mb-8">
+<span class="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-xl opacity-70 hover:opacity-100 cursor-pointer">group</span>
+</div>
+<p class="font-manrope text-sm opacity-70 text-right">
+                    © 2024 Namal University. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+  document.querySelectorAll('[data-filter]').forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+      
+      // Update active button styles
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+      });
+      button.classList.add('bg-primary', 'text-on-primary');
+      button.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+
+      // Filter cards
+      document.querySelectorAll('[data-department]').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-department') === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script></body></html>
