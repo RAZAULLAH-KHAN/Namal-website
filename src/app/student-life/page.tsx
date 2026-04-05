@@ -1,228 +1,302 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-
 export default function Page() {
   return (
     <>
-      <Header />
-      <main className="pt-20">
-        {/* Hero Section: Editorial Style */}
-        <section className="relative h-[870px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img 
-              alt="Diverse students laughing and walking together" 
-              className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIijkCcDTd2CCzJoQwa0oY43krKRH_BK77nbBgftGB99zy5yy9MrNtXRMnYqRve89GdoW21cTsQjDQrpXBuo-QfrNqOQOE1sZMqt6XC8iZvtqh0LTbN9jJdnWwFYvpNx4j_8kfni-t-XVJStMwbSQ0ltj1v7itpJUUXi0elQcGq8Wo7OGEOSQmYKym9t4DGr67VRTEcB_LrZu07m4Emg_8Y2IQAGvWoNNH7RP-_yq8pbmk_Av-tVUa6JiUQ_6WCTNiL4TUCB4-" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/40 to-transparent"></div>
-          </div>
-          <div className="relative z-10 max-w-screen-2xl mx-auto px-12 w-full">
-            <div className="max-w-3xl space-y-8">
-              <span className="inline-block px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container font-headline font-black text-xs tracking-[0.3em] uppercase shadow-lg">CAMPUS EXPERIENCE</span>
-              <h1 className="font-headline font-black text-white leading-[0.95] tracking-tighter text-7xl md:text-9xl">
-                Life Beyond <br /> Lectures.
-              </h1>
-              <p className="text-emerald-50 max-w-xl leading-relaxed text-2xl font-light opacity-90 text-balance decoration-emerald-200/20">
-                At Namal, education is lived, not just learned. Join a community that celebrates diversity, sparks innovation, and builds lifelong bonds.
-              </p>
-              <div className="flex flex-wrap gap-6 pt-6">
-                <button className="bg-secondary text-on-secondary px-10 py-5 rounded-2xl font-headline font-black text-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-2xl shadow-secondary/20">Explore Clubs</button>
-                <button className="bg-white/10 backdrop-blur-xl text-white border-2 border-white/20 px-10 py-5 rounded-2xl font-headline font-black text-lg hover:bg-white/20 transition-all">Student Stories</button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Bento Grid: Clubs & Societies */}
-        <section className="py-24 bg-surface">
-          <div className="max-w-screen-2xl mx-auto px-12">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-              <div className="space-y-6">
-                <h2 className="text-5xl md:text-7xl font-headline font-black tracking-tighter text-primary">Vibrant Communities</h2>
-                <p className="text-on-surface-variant max-w-xl text-xl font-medium opacity-80 leading-relaxed text-balance">From high-stakes debating to building the next generation of robotics, find your tribe among 50+ student-led organizations.</p>
-              </div>
-              <button className="text-secondary font-headline font-black uppercase text-xs tracking-widest flex items-center gap-3 border-b-2 border-secondary pb-1 hover:gap-6 transition-all">
-                View All Clubs <span className="material-symbols-outlined font-black">arrow_forward</span>
-              </button>
+{/* TopNavBar */}
+<nav className="fixed top-0 w-full z-50 bg-[#fbf9f9]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div className="text-2xl font-black text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">
+                Namal University
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-full md:h-[900px]">
-              {/* Robotics */}
-              <div className="md:col-span-8 group relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/5 transition-all duration-700">
-                <img 
-                  alt="Engineering students working on a robot prototype" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFDAc0LScxril871h9cjHZ3eiR59-ev7VtPEHGzC1pGeHKWa-z96krM8eHxv4gY-i93Yj-Fmii4uKA9uFKHCE_E99JatkY-ee8Pq09p67EvRjAHqDBhK_tcH8FbW1DapErjvvh7XSJvexyVDw9qOdx8NKgn9YzFY__tm7EPjbT9HKbRrtk7anOpfePdXgxc_KGMc4olEDpVc8h0n9aSDpoKs9dHpewdpgspm1kFCcLUHJ7NWxxaKMfL3dP8M8DOFwK9FOIq-cC" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent flex flex-col justify-end p-12">
-                  <span className="text-secondary-container font-headline font-black text-xs tracking-[0.3em] uppercase mb-4 decoration-secondary/30 underline underline-offset-8">INNOVATION</span>
-                  <h3 className="text-white text-5xl font-black font-headline tracking-tighter mb-4 leading-tight">Namal Robotics Society</h3>
-                  <p className="text-emerald-50 max-w-md mt-2 font-medium opacity-80">Competing in international arenas and building the future of automated systems.</p>
-                </div>
-              </div>
-              {/* Athletics */}
-              <div className="md:col-span-4 group relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/5">
-                <img 
-                  alt="Student athlete playing cricket" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaGYV9j653dCsYMNooLJgKskadCYACbgoqyJ6rzCkF1uR8cExyuh0bGhmP8Z8WH9rv4v6W69dFuO8pqxhnJdb3FAGubzEa11SXn7R-FvtG35Qhc3nHraZ5lznEu1GRl8ULGDEC-af3uhu6KUT5NMcaz6cTok9ejvnLmNGMhPVMsR_CMCoxXgQjI4RfbX5lKeeTlrV0cHrdRGjhhNVnf0MtIi0TtWZVlh8ewV_qsqjeZaN5JpkIt7IAqKjp96Kdn6zT8HRwJLsq" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent flex flex-col justify-end p-12">
-                  <span className="text-secondary-container font-headline font-black text-xs tracking-[0.3em] uppercase mb-4">ATHLETICS</span>
-                  <h3 className="text-white text-4xl font-black font-headline tracking-tighter leading-tight text-balance">Titans Athletics</h3>
-                </div>
-              </div>
-              {/* Arts */}
-              <div className="md:col-span-4 group relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/5">
-                <img 
-                  alt="Student painting abstract canvas" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFhoMrJ37hNvUz6DdChE1eljl9kQ1uDv-9xlNtW_dL4T0j89-aHd7oHObV0OTFVV0nfOJ1GgfRC8QbqvHjxDXl92xhFrkAQ4tiBfJ9-hofNKTr-ZlAN5ty6yv3QR5FzbXHfoj1GadgjntxhtmtG8fKd94wlbODbGdi4w3strAtxF-xH_w6XYa2MDAlRUz4yJZke7Vc62vAONzs_X9YR6y-aQJ_MU86E6JiixRXtv9t_VKsMdVn_BnsKqqony1Tlo-XxxOw-kgE" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent flex flex-col justify-end p-12">
-                  <h3 className="text-white text-4xl font-black font-headline tracking-tighter leading-tight">Performing Arts <br /> &amp; Culture</h3>
-                </div>
-              </div>
-              {/* Debating */}
-              <div className="md:col-span-8 group relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/5">
-                <img 
-                  alt="Student speaking at a debate competition" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNgdh79Hyu_r9DTC5591V2xNXCkQfPugchmqT0tLZb2GoD1tafdstjnZzk5tJGoWlj6OT21cFHtMnTScufrxa_KP0IY_67XwSaHqDFnspe1q641HoT9n9rY2-zvn0glk9wiA2AiZF2u9IDBI1FqPOOWQ81Nd9SIiw0V5s29Rue75OFghAIhwWbHOgMbPSc7Y0Ta3wLtO6OsRdEQRDjAYKMvn-Heu_eJXT9l0HPnA6aDLFKtg6VMQyg-kUdYkGOmT95N9wRFrPQ" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent flex flex-col justify-end p-12">
-                  <span className="text-secondary-container font-headline font-black text-xs tracking-[0.3em] uppercase mb-4">LEADERSHIP</span>
-                  <h3 className="text-white text-5xl font-black font-headline tracking-tighter leading-tight mb-4">The Debating Union</h3>
-                  <p className="text-emerald-50 max-w-md mt-2 font-medium opacity-80">Sharpening minds and voices through rigorous dialogue and international tournaments.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Virtual Tour Section */}
-        <section className="relative py-32 bg-surface-container-low overflow-hidden">
-          <div className="max-w-screen-2xl mx-auto px-12 grid md:grid-cols-2 gap-24 items-center">
-            <div className="order-2 md:order-1 relative">
-              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl rotate-[-3deg] transition-transform hover:rotate-0 duration-700 border-[12px] border-white group">
-                <img 
-                  alt="Aerial view of sustainable campus architecture" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvOzDF28jYpM1rXbHiy2iSfebIkdTEShDRlK7813NXF1odzIKUFqVGy15_hS54tA6a2rJyKUBTAPd7M3q_vPlYfJkGRSSB1C0U026e-_pZSE3zVwP_tILNecfJQu8PONUtTciqAVuY0MDTBNlBNxn8nHxTNVVmF4pSjPMdVLaPOgEbjCrdpCYJcmlVPkD8iMfR5VCSlsz75c_DdulrOISnWF7e_fq5-Q89Eanu5HUtE_VZ3UelSjx022byt98cI2MzdUUdSmDb" 
-                />
-              </div>
-              <div className="absolute -bottom-12 -right-6 bg-white p-10 rounded-[2rem] shadow-2xl max-w-xs border border-outline-variant/10 group-hover:scale-105 transition-transform duration-500">
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
-                    <span className="material-symbols-outlined text-3xl font-black">explore</span>
-                  </div>
-                  <h4 className="font-headline font-black text-2xl text-primary tracking-tighter">Interactive Map</h4>
-                </div>
-                <p className="text-sm text-on-surface-variant leading-relaxed font-medium mb-6 italic opacity-80 text-balance text-left leading-relaxed font-medium mb-6 italic opacity-80 text-balance">Experience our state-of-the-art labs and social spaces from anywhere in the world.</p>
-                <button className="text-secondary font-black uppercase text-xs tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                  Start Tour <span className="material-symbols-outlined text-lg">chevron_right</span>
+<div className="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
+<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Academics</a>
+<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Admissions</a>
+<a className="text-emerald-900 dark:text-emerald-400 border-b-2 border-amber-500 pb-1" href="#">Student Life</a>
+<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Research</a>
+<a className="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Faculty</a>
+</div>
+<div className="flex items-center gap-6">
+<div className="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant/15">
+<span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input className="bg-transparent border-none focus:ring-0 text-sm w-32 font-body" placeholder="Search campus..." type="text"/>
+</div>
+<button className="hero-gradient text-on-primary px-6 py-2.5 rounded-xl font-headline font-bold tracking-tight scale-95 active:opacity-80 transition-transform shadow-lg shadow-primary/20">
+                    Apply Now
                 </button>
-              </div>
-            </div>
-            <div className="order-1 md:order-2 space-y-12">
-              <h2 className="text-6xl md:text-8xl font-headline font-black text-primary tracking-tighter leading-[0.9]">Our Habitat <br />for Innovation</h2>
-              <p className="text-xl text-on-surface-variant font-medium leading-relaxed opacity-80 text-balance">
-                Namal is more than just a place to study; it{"'"}s a living laboratory. Our campus is designed to inspire collaboration, sustainability, and curiosity. 
-              </p>
-              <div className="space-y-8">
-                {[
-                  { title: "Smart Laboratories", desc: "Equipped with the latest industry-standard technology for practical learning." },
-                  { title: "Creative Studios", desc: "Dedicated spaces for music, art, and content creation." },
-                  { title: "Zero-Carbon Housing", desc: "Modern, comfortable living that respects the environment." }
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-6 group">
-                    <span className="material-symbols-outlined text-secondary mt-1 text-3xl font-black group-hover:scale-125 transition-transform">check_circle</span>
-                    <div className="border-b border-outline-variant/10 pb-6 w-full">
-                      <h5 className="font-headline font-black text-2xl text-primary mb-2 tracking-tight leading-tight">{item.title}</h5>
-                      <p className="text-sm text-on-surface-variant font-medium opacity-70 leading-relaxed text-balance">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Student Stories Section */}
-        <section className="py-24 bg-white mb-24">
-          <div className="max-w-screen-2xl mx-auto px-12 text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-headline font-black text-primary tracking-tighter mb-6 leading-tight">Student Stories</h2>
-            <div className="w-24 h-2 bg-secondary mx-auto rounded-full"></div>
-          </div>
-          <div className="max-w-screen-2xl mx-auto px-12 grid md:grid-cols-3 gap-12">
-            {[
-              {
-                name: "Sarah Ahmed",
-                dept: "Computer Science, Class of 2025",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZJGSA6s2pCbIoVdOViP4ZW3iunZdBqDiph4FOW6ShO2_xLPoLtO4NGmqVlwomIsQIXRP1golCyJW3ZD9Qk4zpQp2MNpj1Zv5Z18eRZ2pn0Y48bMD-qMD_jys43YW2FjCLOcAvHsZwrPMmkDlhqKfWd9naaOMH-PHwPOrUnG1NKDXo-K5b_l9tmQm_2VDtORgHAQt3TxmOLqa-K2FtXJV7oJH_8qFtqwJUc9QZbHuZGhy7MkHR-U7v0fUUii4co3QDtlynUI9q",
-                quote: "The Robotics Society didn't just teach me how to code; it taught me how to lead. We went from a small idea to winning a national competition in just one year."
-              },
-              {
-                name: "Zain Malik",
-                dept: "Electrical Engineering, Class of 2024",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAbnr1VRvnE94jRC4RYsTHWfVo-n6qCtPfnU56ZVv6MbZ7pfBR_LHiWl_8VXEIviEkWgW9SaYmWtJAytvO3yGrl2laU6EBHHeORk8KujY9u9VWDnI8GMRV6qmJS4p5MOYVEHMboF0dCZyUPUgSUzmG-3GZeQktsrnrqvjVirCWf_8LhwiM4raTxuljWT5JCxRlKQm-PMTo3MiBkdhfLqYlFH9hOjVWXDmEuh3z25O2ZTS_3DQfxzqc1yiJptR6i1j6cnz0BWnJK",
-                quote: "Coming from a small village, Namal was a world of opportunities. The community here supports you like family. Every lecture feels like an opening to a new world."
-              },
-              {
-                name: "Ayesha Khan",
-                dept: "Agribusiness, Class of 2026",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAlTlT0ftVu8MoKFtH0kN37DUzmAGJV7ZfebWDy699Q1g9EVDHg1sdIL62AD4JLeRBPaYxs0_yIrrsVgsZQ1QhxIM6wBQufxuMgibGDFn6Ih4bgSvCdcsX9fwafAB7dFe4umiSNpunNoS7LHp6PivfIQdmVX5fpmnbvdRdLgY-BDgYtTCFDYqT5Sscx_x-1yCuwPggQqeOe3RVR5knJlHTKD2qUpaDJlFRGMBqxgq7uhvB5L8xuqHqEoRkVAxAJs9dOGeCT5Fnh",
-                quote: "I never thought I'd be part of a drama society, but Namal pushes you to explore your hidden talents. It's truly a place where you discover your whole self."
-              }
-            ].map((story) => (
-              <div key={story.name} className="bg-surface-container-low p-10 rounded-[2.5rem] relative group border border-outline-variant/10 shadow-xl shadow-primary/5 hover:bg-primary transition-all duration-700">
-                <span className="material-symbols-outlined text-secondary text-7xl absolute top-8 right-10 opacity-10 group-hover:text-white transition-all transform rotate-12" data-weight="fill">format_quote</span>
-                <div className="flex items-center gap-6 mb-10">
-                  <div className="relative">
-                    <img alt={story.name} className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg group-hover:border-secondary transition-all" src={story.img} />
-                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary rounded-full border-2 border-white group-hover:bg-white transition-all shadow-sm"></div>
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-headline font-black text-2xl text-primary group-hover:text-white transition-colors tracking-tighter leading-tight">{story.name}</h4>
-                    <p className="text-[10px] uppercase font-black tracking-widest text-on-surface-variant group-hover:text-emerald-100 transition-colors opacity-70 mt-1">{story.dept}</p>
-                  </div>
-                </div>
-                <p className="text-on-surface-variant group-hover:text-emerald-50 text-xl font-medium leading-relaxed transition-all decoration-emerald-200/20 italic">
-                  {"\""}{story.quote}{"\""}
+</div>
+</div>
+<div className="bg-slate-200/20 dark:bg-slate-800/20 h-[1px]"></div>
+</nav>
+<main className="pt-20">
+{/* Hero Section: Editorial Style */}
+<section className="relative h-[870px] flex items-center overflow-hidden">
+<div className="absolute inset-0 z-0">
+<img className="w-full h-full object-cover" data-alt="Vibrant group of diverse students laughing and walking together through a sun-drenched, modern university courtyard with lush greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIijkCcDTd2CCzJoQwa0oY43krKRH_BK77nbBgftGB99zy5yy9MrNtXRMnYqRve89GdoW21cTsQjDQrpXBuo-QfrNqOQOE1sZMqt6XC8iZvtqh0LTbN9jJdnWwFYvpNx4j_8kfni-t-XVJStMwbSQ0ltj1v7itpJUUXi0elQcGq8Wo7OGEOSQmYKym9t4DGr67VRTEcB_LrZu07m4Emg_8Y2IQAGvWoNNH7RP-_yq8pbmk_Av-tVUa6JiUQ_6WCTNiL4TUCB4-"/>
+<div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+<div className="max-w-3xl space-y-6">
+<span className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm tracking-wide">CAMPUS EXPERIENCE</span>
+<h1 className="text-display-lg font-headline font-extrabold text-white leading-[1.1] tracking-tighter text-6xl md:text-8xl">
+                        Life Beyond <br/> Lectures.
+                    </h1>
+<p className="text-body-lg text-white/90 max-w-xl leading-relaxed text-xl">
+                        At Namal, education is lived, not just learned. Join a community that celebrates diversity, sparks innovation, and builds lifelong bonds.
+                    </p>
+<div className="flex gap-4 pt-4">
+<button className="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-secondary/90 transition-all">Explore Clubs</button>
+<button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/20 transition-all">Student Stories</button>
+</div>
+</div>
+</div>
+</section>
+{/* Bento Grid: Clubs & Societies */}
+<section className="py-24 bg-surface">
+<div className="max-w-screen-2xl mx-auto px-8">
+<div className="flex justify-between items-end mb-16">
+<div className="space-y-4">
+<h2 className="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-primary">Vibrant Communities</h2>
+<p className="text-on-surface-variant max-w-lg text-lg">From high-stakes debating to building the next generation of robotics, find your tribe among 50+ student-led organizations.</p>
+</div>
+<button className="text-secondary font-headline font-bold flex items-center gap-2 hover:underline">
+                        View All Clubs <span className="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
+{/* Robotics */}
+<div className="md:col-span-8 group relative rounded-xl overflow-hidden shadow-sm">
+<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Focused engineering students working on a complex robot prototype in a high-tech lab with glowing blue lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFDAc0LScxril871h9cjHZ3eiR59-ev7VtPEHGzC1pGeHKWa-z96krM8eHxv4gY-i93Yj-Fmii4uKA9uFKHCE_E99JatkY-ee8Pq09p67EvRjAHqDBhK_tcH8FbW1DapErjvvh7XSJvexyVDw9qOdx8NKgn9YzFY__tm7EPjbT9HKbRrtk7anOpfePdXgxc_KGMc4olEDpVc8h0n9aSDpoKs9dHpewdpgspm1kFCcLUHJ7NWxxaKMfL3dP8M8DOFwK9FOIq-cC"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+<span className="text-secondary-fixed-dim font-headline font-bold text-sm tracking-widest uppercase mb-2">Innovation</span>
+<h3 className="text-white text-3xl font-headline font-bold">Namal Robotics Society</h3>
+<p className="text-white/70 max-w-md mt-2">Competing in international arenas and building the future of automated systems.</p>
+</div>
+</div>
+{/* Athletics */}
+<div className="md:col-span-4 group relative rounded-xl overflow-hidden shadow-sm">
+<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A student athlete in mid-action playing cricket on a perfectly manicured green field under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaGYV9j653dCsYMNooLJgKskadCYACbgoqyJ6rzCkF1uR8cExyuh0bGhmP8Z8WH9rv4v6W69dFuO8pqxhnJdb3FAGubzEa11SXn7R-FvtG35Qhc3nHraZ5lznEu1GRl8ULGDEC-af3uhu6KUT5NMcaz6cTok9ejvnLmNGMhPVMsR_CMCoxXgQjI4RfbX5lKeeTlrV0cHrdRGjhhNVnf0MtIi0TtWZVlh8ewV_qsqjeZaN5JpkIt7IAqKjp96Kdn6zT8HRwJLsq"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+<span className="text-secondary-fixed-dim font-headline font-bold text-sm tracking-widest uppercase mb-2">Athletics</span>
+<h3 className="text-white text-3xl font-headline font-bold">Titans Athletics</h3>
+</div>
+</div>
+{/* Arts */}
+<div className="md:col-span-4 group relative rounded-xl overflow-hidden shadow-sm">
+<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a student painting a vibrant abstract canvas in a sun-filled studio space surrounded by art supplies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFhoMrJ37hNvUz6DdChE1eljl9kQ1uDv-9xlNtW_dL4T0j89-aHd7oHObV0OTFVV0nfOJ1GgfRC8QbqvHjxDXl92xhFrkAQ4tiBfJ9-hofNKTr-ZlAN5ty6yv3QR5FzbXHfoj1GadgjntxhtmtG8fKd94wlbODbGdi4w3strAtxF-xH_w6XYa2MDAlRUz4yJZke7Vc62vAONzs_X9YR6y-aQJ_MU86E6JiixRXtv9t_VKsMdVn_BnsKqqony1Tlo-XxxOw-kgE"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+<h3 className="text-white text-2xl font-headline font-bold">Performing Arts &amp; Culture</h3>
+</div>
+</div>
+{/* Debating */}
+<div className="md:col-span-8 group relative rounded-xl overflow-hidden shadow-sm">
+<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A confident student speaking at a podium during a university debate competition in a grand, wood-paneled hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNgdh79Hyu_r9DTC5591V2xNXCkQfPugchmqT0tLZb2GoD1tafdstjnZzk5tJGoWlj6OT21cFHtMnTScufrxa_KP0IY_67XwSaHqDFnspe1q641HoT9n9rY2-zvn0glk9wiA2AiZF2u9IDBI1FqPOOWQ81Nd9SIiw0V5s29Rue75OFghAIhwWbHOgMbPSc7Y0Ta3wLtO6OsRdEQRDjAYKMvn-Heu_eJXT9l0HPnA6aDLFKtg6VMQyg-kUdYkGOmT95N9wRFrPQ"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+<span className="text-secondary-fixed-dim font-headline font-bold text-sm tracking-widest uppercase mb-2">Leadership</span>
+<h3 className="text-white text-3xl font-headline font-bold">The Debating Union</h3>
+<p className="text-white/70 max-w-md mt-2">Sharpening minds and voices through rigorous dialogue and international tournaments.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+{/* Virtual Tour: High-Impact Parallax-like section */}
+<section className="relative py-32 bg-surface-container-low overflow-hidden">
+<div className="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+<div className="order-2 md:order-1 relative">
+<div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-[-2deg] transition-transform hover:rotate-0 duration-500">
+<img className="w-full h-full object-cover" data-alt="Dramatic aerial view of Namal University's sustainable campus architecture nestled in a valley with majestic mountains in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvOzDF28jYpM1rXbHiy2iSfebIkdTEShDRlK7813NXF1odzIKUFqVGy15_hS54tA6a2rJyKUBTAPd7M3q_vPlYfJkGRSSB1C0U026e-_pZSE3zVwP_tILNecfJQu8PONUtTciqAVuY0MDTBNlBNxn8nHxTNVVmF4pSjPMdVLaPOgEbjCrdpCYJcmlVPkD8iMfR5VCSlsz75c_DdulrOISnWF7e_fq5-Q89Eanu5HUtE_VZ3UelSjx022byt98cI2MzdUUdSmDb"/>
+</div>
+{/* Overlapping Card */}
+<div className="absolute -bottom-10 -right-10 bg-surface-container-lowest p-8 rounded-xl shadow-xl max-w-xs border border-outline-variant/15">
+<div className="flex items-center gap-4 mb-4">
+<div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span className="material-symbols-outlined">explore</span>
+</div>
+<h4 className="font-headline font-bold text-primary">Interactive Map</h4>
+</div>
+<p className="text-sm text-on-surface-variant leading-relaxed">Experience our state-of-the-art labs and social spaces from anywhere in the world.</p>
+<button className="mt-4 text-secondary font-bold text-sm flex items-center gap-1 group">
+                            Start Tour <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<div className="order-1 md:order-2 space-y-8">
+<h2 className="text-5xl font-headline font-extrabold text-primary tracking-tight">Our Habitat <br/>for Innovation</h2>
+<p className="text-lg text-on-surface-variant leading-relaxed">
+                        Namal is more than just a place to study; it's a living laboratory. Our campus is designed to inspire collaboration, sustainability, and curiosity. 
+                    </p>
+<div className="space-y-6">
+<div className="flex items-start gap-4">
+<span className="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<h5 className="font-headline font-bold text-primary">Smart Laboratories</h5>
+<p className="text-sm text-on-surface-variant">Equipped with the latest industry-standard technology for practical learning.</p>
+</div>
+</div>
+<div className="flex items-start gap-4">
+<span className="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<h5 className="font-headline font-bold text-primary">Creative Studios</h5>
+<p className="text-sm text-on-surface-variant">Dedicated spaces for music, art, and content creation.</p>
+</div>
+</div>
+<div className="flex items-start gap-4">
+<span className="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<h5 className="font-headline font-bold text-primary">Zero-Carbon Housing</h5>
+<p className="text-sm text-on-surface-variant">Modern, comfortable living that respects the environment.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+{/* Student Stories: Testimonial Grid */}
+<section className="py-24 bg-surface-container-lowest">
+<div className="max-w-screen-2xl mx-auto px-8 text-center mb-16">
+<h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-4">Student Stories</h2>
+<div className="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div className="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-3 gap-8">
+{/* Story 1 */}
+<div className="bg-surface-container-low p-8 rounded-xl relative group hover:bg-primary transition-colors duration-500">
+<span className="material-symbols-outlined text-secondary text-5xl absolute top-6 right-8 opacity-20" data-weight="fill">format_quote</span>
+<div className="flex items-center gap-4 mb-6">
+<img className="w-16 h-16 rounded-full object-cover border-2 border-secondary" data-alt="Headshot of a smiling young woman with bright eyes and a professional expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZJGSA6s2pCbIoVdOViP4ZW3iunZdBqDiph4FOW6ShO2_xLPoLtO4NGmqVlwomIsQIXRP1golCyJW3ZD9Qk4zpQp2MNpj1Zv5Z18eRZ2pn0Y48bMD-qMD_jys43YW2FjCLOcAvHsZwrPMmkDlhqKfWd9naaOMH-PHwPOrUnG1NKDXo-K5b_l9tmQm_2VDtORgHAQt3TxmOLqa-K2FtXJV7oJH_8qFtqwJUc9QZbHuZGhy7MkHR-U7v0fUUii4co3QDtlynUI9q"/>
+<div className="text-left">
+<h4 className="font-headline font-bold text-primary group-hover:text-white transition-colors">Sarah Ahmed</h4>
+<p className="text-xs text-on-surface-variant group-hover:text-white/70 transition-colors">Computer Science, Class of 2025</p>
+</div>
+</div>
+<p className="text-on-surface-variant group-hover:text-white/90 leading-relaxed transition-colors">
+                        "The Robotics Society didn't just teach me how to code; it taught me how to lead. We went from a small idea to winning a national competition in just one year."
+                    </p>
+</div>
+{/* Story 2 */}
+<div className="bg-surface-container-low p-8 rounded-xl relative group hover:bg-primary transition-colors duration-500">
+<span className="material-symbols-outlined text-secondary text-5xl absolute top-6 right-8 opacity-20" data-weight="fill">format_quote</span>
+<div className="flex items-center gap-4 mb-6">
+<img className="w-16 h-16 rounded-full object-cover border-2 border-secondary" data-alt="Portrait of a young man with glasses and a friendly smile, dressed in a casual academic outfit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbnr1VRvnE94jRC4RYsTHWfVo-n6qCtPfnU56ZVv6MbZ7pfBR_LHiWl_8VXEIviEkWgW9SaYmWtJAytvO3yGrl2laU6EBHHeORk8KujY9u9VWDnI8GMRV6qmJS4p5MOYVEHMboF0dCZyUPUgSUzmG-3GZeQktsrnrqvjVirCWf_8LhwiM4raTxuljWT5JCxRlKQm-PMTo3MiBkdhfLqYlFH9hOjVWXDmEuh3z25O2ZTS_3DQfxzqc1yiJptR6i1j6cnz0BWnJK"/>
+<div className="text-left">
+<h4 className="font-headline font-bold text-primary group-hover:text-white transition-colors">Zain Malik</h4>
+<p className="text-xs text-on-surface-variant group-hover:text-white/70 transition-colors">Electrical Engineering, Class of 2024</p>
+</div>
+</div>
+<p className="text-on-surface-variant group-hover:text-white/90 leading-relaxed transition-colors">
+                        "Coming from a small village, Namal was a world of opportunities. The community here supports you like family. Every lecture feels like an opening to a new world."
+                    </p>
+</div>
+{/* Story 3 */}
+<div className="bg-surface-container-low p-8 rounded-xl relative group hover:bg-primary transition-colors duration-500">
+<span className="material-symbols-outlined text-secondary text-5xl absolute top-6 right-8 opacity-20" data-weight="fill">format_quote</span>
+<div className="flex items-center gap-4 mb-6">
+<img className="w-16 h-16 rounded-full object-cover border-2 border-secondary" data-alt="Young woman with a thoughtful expression looking into the distance with a bright, sun-faded background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlTlT0ftVu8MoKFtH0kN37DUzmAGJV7ZfebWDy699Q1g9EVDHg1sdIL62AD4JLeRBPaYxs0_yIrrsVgsZQ1QhxIM6wBQufxuMgibGDFn6Ih4bgSvCdcsX9fwafAB7dFe4umiSNpunNoS7LHp6PivfIQdmVX5fpmnbvdRdLgY-BDgYtTCFDYqT5Sscx_x-1yCuwPggQqeOe3RVR5knJlHTKD2qUpaDJlFRGMBqxgq7uhvB5L8xuqHqEoRkVAxAJs9dOGeCT5Fnh"/>
+<div className="text-left">
+<h4 className="font-headline font-bold text-primary group-hover:text-white transition-colors">Ayesha Khan</h4>
+<p className="text-xs text-on-surface-variant group-hover:text-white/70 transition-colors">Agribusiness, Class of 2026</p>
+</div>
+</div>
+<p className="text-on-surface-variant group-hover:text-white/90 leading-relaxed transition-colors">
+                        "I never thought I'd be part of a drama society, but Namal pushes you to explore your hidden talents. It's truly a place where you discover your whole self."
+                    </p>
+</div>
+</div>
+</section>
+{/* Academic Timeline Style Component for Events */}
+<section className="py-24 bg-surface">
+<div className="max-w-4xl mx-auto px-8">
+<h2 className="text-4xl font-headline font-extrabold text-primary mb-12 text-center">Calendar Highlights</h2>
+<div className="relative">
+<div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary/10"></div>
+<div className="space-y-16">
+{/* Event 1 */}
+<div className="relative flex items-center justify-between group">
+<div className="w-[45%] text-right pr-12">
+<span className="text-secondary font-headline font-bold text-lg">OCT 15</span>
+<h4 className="text-xl font-headline font-bold text-primary mt-1">Tech Spark Summit</h4>
+<p className="text-on-surface-variant mt-2 text-sm">Annual tech fest featuring industry leaders and hackathons.</p>
+</div>
+<div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-surface shadow-sm z-10"></div>
+<div className="w-[45%]"></div>
+</div>
+{/* Event 2 */}
+<div className="relative flex items-center justify-between group">
+<div className="w-[45%]"></div>
+<div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-surface shadow-sm z-10"></div>
+<div className="w-[45%] text-left pl-12">
+<span className="text-secondary font-headline font-bold text-lg">NOV 02</span>
+<h4 className="text-xl font-headline font-bold text-primary mt-1">Cultural Gala</h4>
+<p className="text-on-surface-variant mt-2 text-sm">Celebrating the rich diversity of Pakistan through food, music, and art.</p>
+</div>
+</div>
+{/* Event 3 */}
+<div className="relative flex items-center justify-between group">
+<div className="w-[45%] text-right pr-12">
+<span className="text-secondary font-headline font-bold text-lg">DEC 10</span>
+<h4 className="text-xl font-headline font-bold text-primary mt-1">Winter Sports Cup</h4>
+<p className="text-on-surface-variant mt-2 text-sm">Inter-departmental championship for cricket and football.</p>
+</div>
+<div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-surface shadow-sm z-10"></div>
+<div className="w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+{/* Footer */}
+<footer className="bg-[#f5f3f3] dark:bg-slate-900 w-full border-t-0">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
+<div className="space-y-6">
+<div className="text-xl font-bold text-emerald-900 dark:text-emerald-100 font-headline">Namal University</div>
+<p className="text-slate-500 dark:text-slate-400 font-body text-sm leading-relaxed max-w-xs">
+                    Empowering the next generation of leaders with knowledge, ethics, and innovation. Knowledge for All.
                 </p>
-              </div>
-            ))}
-          </div>
-        </section>
+<div className="flex gap-4">
+<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span className="material-symbols-outlined text-lg">public</span>
+</a>
+<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span className="material-symbols-outlined text-lg">alternate_email</span>
+</a>
+<a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span className="material-symbols-outlined text-lg">campaign</span>
+</a>
+</div>
+</div>
+<div className="grid grid-cols-2 gap-8">
+<div className="space-y-4">
+<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Quick Links</h5>
+<ul className="space-y-2 font-body text-sm">
+<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Contact Us</a></li>
+<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Privacy Policy</a></li>
+<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Campus Map</a></li>
+</ul>
+</div>
+<div className="space-y-4">
+<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Connect</h5>
+<ul className="space-y-2 font-body text-sm">
+<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Alumni</a></li>
+<li><a className="text-slate-500 dark:text-slate-400 hover:underline hover:text-emerald-700 dark:hover:text-emerald-300" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div className="space-y-6">
+<h5 className="text-emerald-900 dark:text-emerald-400 font-headline font-bold text-sm uppercase tracking-wider">Newsletter</h5>
+<p className="text-slate-500 dark:text-slate-400 text-sm font-body">Stay updated with campus life and events.</p>
+<div className="flex">
+<input className="bg-surface-container-high border-none rounded-l-xl focus:ring-secondary px-4 py-2 text-sm flex-grow font-body" placeholder="Email address" type="email"/>
+<button className="bg-primary text-white rounded-r-xl px-4 flex items-center justify-center">
+<span className="material-symbols-outlined">send</span>
+</button>
+</div>
+<div className="pt-4 text-xs text-slate-500 dark:text-slate-400 font-body">
+                    © 2024 Namal University. Knowledge for All.
+                </div>
+</div>
+</div>
+</footer>
 
-        {/* Calendar Highlights Section */}
-        <section className="py-24 bg-surface mb-24">
-          <div className="max-w-5xl mx-auto px-12">
-            <h2 className="text-5xl md:text-6xl font-headline font-black text-primary mb-20 text-center tracking-tighter">Calendar Highlights</h2>
-            <div className="relative">
-              <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
-              <div className="space-y-24">
-                {[
-                  { date: "OCT 15", title: "Tech Spark Summit", desc: "Annual tech fest featuring industry leaders and hackathons.", left: true },
-                  { date: "NOV 02", title: "Cultural Gala", desc: "Celebrating the rich diversity of Pakistan through food, music, and art.", left: false },
-                  { date: "DEC 10", title: "Winter Sports Cup", desc: "Inter-departmental championship for cricket and football.", left: true }
-                ].map((event) => (
-                  <div key={event.date} className="relative flex items-center justify-between group">
-                    <div className={`w-[45%] ${event.left ? 'text-right pr-16' : 'text-left pl-16 order-2'}`}>
-                      <span className="text-secondary font-headline font-black text-2xl tracking-[0.2em] mb-4 block underline underline-offset-8 decoration-secondary/20">{event.date}</span>
-                      <h4 className="text-3xl font-black font-headline text-primary mt-2 tracking-tighter leading-tight group-hover:text-secondary transition-colors">{event.title}</h4>
-                      <p className="text-on-surface-variant mt-4 text-lg font-medium opacity-80 leading-relaxed italic text-balance mb-4">{event.desc}</p>
-                    </div>
-                    <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full border-[6px] border-secondary shadow-2xl z-10 group-hover:scale-150 transition-all duration-500 ring-8 ring-primary/5"></div>
-                    <div className="w-[45%]"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
     </>
   );
 }

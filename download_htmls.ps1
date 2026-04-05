@@ -7,7 +7,7 @@ $urls = @{
   "Namal_Research.html" = "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ5Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpYCiVodG1sX2M4MzUyNTYxN2Q1MDRjOWRiYWQyZGIwOTUxYmM0MDM5EgsSBxD4-IGb0xwYAZIBIQoKcHJvamVjdF9pZBITQhEzMTk4MTg1ODgxMTM4NjQ1OQ&filename=&opi=89354086";
   "Namal_Portal.html" = "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ5Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpYCiVodG1sX2NiYWZhOTU3ZDU0NDRmMjliNDRkZTNkZDQzNmY0NDU4EgsSBxD4-IGb0xwYAZIBIQoKcHJvamVjdF9pZBITQhEzMTk4MTg1ODgxMTM4NjQ1OQ&filename=&opi=89354086"
 }
-New-Item -ItemType Directory -Force -Path stitch_html
+New-Item -ItemType Directory -Force -Path pages_html
 foreach ($k in $urls.Keys) {
-  Invoke-WebRequest -Uri $urls[$k] -OutFile "stitch_html\$k"
+  Invoke-WebRequest -Uri $urls[$k] -OutFile "pages_html\$k"
 }

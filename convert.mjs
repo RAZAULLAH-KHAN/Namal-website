@@ -12,7 +12,7 @@ const files = [
 ];
 
 for (const { html, target } of files) {
-  const content = fs.readFileSync(path.join("stitch_html", html), "utf-8");
+  const content = fs.readFileSync(path.join("pages_html", html), "utf-8");
   
   const bodyMatch = content.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   if (!bodyMatch) continue;
